@@ -4,13 +4,13 @@ class Answer extends StatelessWidget {
   final selectHandler;
   final String answerText;
 
-  Answer(this.selectHandler, this.answerText);
+  const Answer(this.selectHandler, this.answerText, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.only(left: 10, right: 10),
+      margin: const EdgeInsets.only(left: 10, right: 10),
       child: ElevatedButton(
         onPressed: selectHandler,
         child: Text(answerText),
